@@ -5,8 +5,8 @@ import cn.nukkit.utils.Config;
 
 public class PluginMain extends PluginBase{
 
+    public static Config config;
     private static PluginMain ins;
-    private Config config;
 
     public static PluginMain getInstance(){
         return ins;

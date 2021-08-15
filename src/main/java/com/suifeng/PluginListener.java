@@ -11,15 +11,13 @@ import java.util.ArrayList;
 
 public class PluginListener implements Listener {
 
-    private Config config = new Config();
-
     @EventHandler
     public void PigEvents(EntityDeathEvent ev){
         Entity e = ev.getEntity();
         if(e.getNetworkId()==12){
             ArrayList<Item> ite = new ArrayList<>();
             Item item; //方法内无需修饰符
-            for (String str : config.getStringList("PigDrops")){
+            for (String str : PluginMain.config.getStringList("PigDrops")){
                 item = Item.fromString(str);
                 item.setCount(Integer.parseInt(str.split(":")[2]));
                 ite.add(item);
@@ -27,4 +25,5 @@ public class PluginListener implements Listener {
             ev.setDrops(ite.toArray(new Item[0]));
         }
     }
+
 }
