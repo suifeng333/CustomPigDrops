@@ -1,6 +1,0 @@
-name: CustomPigDrops
-main: com.suifeng.PluginMain
-version: "1.0.0"
-author: suifeng7663
-api: ["1.0.11"]
-description: This is a very easy plugin.
