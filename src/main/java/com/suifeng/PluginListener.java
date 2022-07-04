@@ -17,7 +17,7 @@ public class PluginListener implements Listener {
         if(e.getNetworkId()==12){
             ArrayList<Item> ite = new ArrayList<>();
             Item item; //方法内无需修饰符
-            for (String str : PluginMain.config.getStringList("PigDrops")){
+            for (String str : PluginMain.config.getStringList("PigDrop")){
                 item = Item.fromString(str);
                 item.setCount(Integer.parseInt(str.split(":")[2]));
                 ite.add(item);
